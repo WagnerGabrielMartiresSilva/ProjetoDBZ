@@ -1,0 +1,9 @@
+/* Custom Orange para o Projeto DBZ */
+.bg-orange {
+    background-color: #ff8c00 !important; /* Laranja Goku */
+}
+
+/* Ajuste para o texto não sumir no laranja */
+.navbar-dark .navbar-brand {
+    color: white !important;
+}

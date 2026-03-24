@@ -1,0 +1,11 @@
+# Pastas de compilação (lixo eletrônico)
+bin/
+obj/
+
+# Configurações do Visual Studio e VS Code
+.vs/
+.vscode/
+*.user
+
+# Arquivos do banco de dados local (se houver)
+*.db

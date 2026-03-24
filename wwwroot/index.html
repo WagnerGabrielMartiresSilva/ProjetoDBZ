@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto DBZ - Admin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-dark text-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-orange shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">PROJETO DBZ</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-secondary text-white shadow">
+                    <div class="card-header"><h4>Novo Guerreiro</h4></div>
+                    <div class="card-body">
+                        <form id="formPersonagem">
+                            <div class="mb-3">
+                                <label class="form-label">Nome</label>
+                                <input type="text" id="nome" class="form-control" required placeholder="Ex: Goku">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Tipo</label>
+                                <input type="text" id="tipo" class="form-control" required placeholder="Ex: Saiyajin">
+                            </div>
+                            <button type="submit" class="btn btn-warning w-100 fw-bold">CADASTRAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card bg-secondary text-white shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">
+                        Guerreiros Z no Banco 
+                         <span id="contadorGuerreiros" class="badge bg-warning text-dark ms-2">0</span>
+                        </h4>
+                        <button onclick="carregarPersonagens()" class="btn btn-sm btn-info">
+                            <i class="bi bi-arrow-clockwise"></i>Atualizar</button>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Tipo</th>
+                                    <th class="text-center">Ações</th> 
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaPersonagens">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+    
+<script src="js/script.js"></script>
+</body>
+</html>
