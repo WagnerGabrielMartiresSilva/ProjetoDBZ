@@ -47,5 +47,21 @@ public async Task<IActionResult> Post(Personagem personagem)
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
+[HttpPut("{id}")]
+public async Task<IActionResult> Put(int id, Personagem personagem)
+{
+    try 
+    {
+        // Chamamos o serviço em vez do context
+        var atualizado = await _service.Atualizar(id, personagem);
+        return Ok(atualizado); 
     }
+    catch (Exception ex)
+    {
+        return BadRequest(new { mensagem = ex.Message });
+    }
+}
+        
+    }
+    
 }

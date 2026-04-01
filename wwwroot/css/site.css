@@ -7,3 +7,30 @@
 .navbar-dark .navbar-brand {
     color: white !important;
 }
+/* Efeito de brilho e pulsação para o Ki elevado */
+.ki-elevado {
+    color: #ffc107 !important; /* Amarelo DBZ */
+    text-shadow: 0 0 10px #fff, 0 0 20px #ffc107;
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Estilo para as fotos dos guerreiros na tabela */
+.img-guerreiro {
+    width: 90px;  /* Largura maior e mais visível */
+    height: 90px; /* Mantém quadrada para o círculo perfeito */
+    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+    border: 3px solid #ffc107; /* Borda amarela DBZ */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
+    transition: transform 0.3s ease-in-out; /* Efeito suave para o hover */
+}
+
+.img-guerreiro:hover {
+   transform: scale(1.6); /* Aumenta a foto em 60% */
+    z-index: 10; /* Garante que ela fique por cima dos outros elementos */
+    cursor: zoom-in; /* Muda o ícone do mouse */
+}

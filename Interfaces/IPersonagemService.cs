@@ -1,4 +1,6 @@
 using ProjetoDBZ.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ProjetoDBZ.Interfaces
 {
@@ -6,5 +8,6 @@ namespace ProjetoDBZ.Interfaces
     {
         Task<IEnumerable<Personagem>> ListarTodos();
         Task<Personagem> Adicionar(Personagem personagem);
+        Task<Personagem> Atualizar(int id, Personagem personagem); // <-- Verifique esta linha
     }
 }
